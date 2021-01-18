@@ -30,6 +30,7 @@ LARAVEL:
             + Khái niệm: Giống như control database. 
             + Vị trí: App/database/migrations
             + Câu lệnh: php artisan make:migration NameMigration.
+            + Câu lệnh: php artisan migrate:rollback. => xóa migration trong db
             + Công việc: Dùng để tương tác với database, Quản lí, chỉnh sữa database 1 cách dễ dàng hơn.
 + Model:
             + Khái niệm: 
@@ -47,3 +48,18 @@ LARAVEL:
                         compact($article)[
                             'article' => 'article'
                         ]
+            + with(): cũng tương tự như compact | ->with('article',$article)
+            + link(): tạo ra menu phân trang (1,2,3,4,5)
+            -----------------------------------------------------------------------------------------
++ Seeder: 
+            + Khái niệm: dữ liệu mẫu. 
+            + Vị trí: database/seeds
+            + Câu lệnh tạo mới file seeder: php artisan make:seeder ArticleTableSeeder
+            + Câu lệnh: composer dump-autoload => nó sẽ load tất cả các thư viện nằm trong vendor tạo ra một cái mới. 
+            + Câu lệnh: php artisan db:seed => tạo dữ liệu mẫu dưới db.
+            + Công việc: Tạo ra nhiều dữ liệu mẫu mà k cần phải nhập thủ công vào db
++ Requests: 
+            + Khái niệm: Nó tương tự như Validation|  là những luật hay yêu cầu của dữ liệu bắt buộc phải tuân theo.
+            + Vị trí: App/Http/Requests
+            + Câu lệnh: php artisan make:request NameRequest
+            + Phân quyền: 
